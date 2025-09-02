@@ -5,9 +5,7 @@ import styles from './card.module.scss';
 
 export const Card = () => {
   const { ref, inView } = useInView({
-    threshold: 0,
-    rootMargin: '-170px',
-    delay: 50,
+    threshold: 0.2,
   });
 
   return (

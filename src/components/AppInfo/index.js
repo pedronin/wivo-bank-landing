@@ -1,28 +1,12 @@
-import { useCallback, useState } from 'react';
 import clsx from 'clsx';
 import { useInView } from 'react-intersection-observer';
-import { useWindowWidth } from '@/hooks';
-import { BREAKPOINTS } from '@/constants';
 
 import styles from './appInfo.module.scss';
 
 export const AppInfo = () => {
-  const [rootMargin, setRootMargin] = useState("");
-
-  const resizeHandler = useCallback((windowWidth) => {
-    if (windowWidth < BREAKPOINTS.tiny) {
-      setRootMargin("-200px");
-    } else {
-      setRootMargin("-300px");
-    }
-  }, []);
-
-  useWindowWidth(resizeHandler);
-
   const { ref: decorRef, inView } = useInView({
-    threshold: 0,
-    rootMargin,
-    delay: 50,
+    threshold: 0.8,
+    rootMargin: '-100px 0px 0px 0px',
   });
 
   return (
