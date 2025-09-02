@@ -1,0 +1,56 @@
+:root {
+  // Fonts
+  --font-size-h1: 96px;
+  --font-size-h2: 72px;
+  --font-size-h3: 24px;
+
+  --font-size-p: 18px;
+  --font-size-body-m: 18px;
+  --font-size-body-s: 14px;
+
+  --font-size-link-m: 18px;
+  --font-size-link-s: 14px;
+  --font-size-nav-link: 18px;
+  --font-size-caption: 16px;
+  --font-size-disclaimer: 14px;
+
+  --line-height-h1: 94%;
+  --line-height-h2: 94%;
+  --line-height-h3: 130%;
+
+  --line-height-p: 135%;
+  --line-height-body-m: 135%;
+  --line-height-body-s: 150%;
+
+  --line-height-link-m: 135%;
+  --line-height-link-s: 135%;
+  --line-height-nav-link: 135%;
+  --line-height-caption: 150%;
+  --line-height-disclaimer: 150%;
+
+  // Container
+  --container-offset: 40px;
+}
+
+@media ($screen-extra-medium) {
+  :root {
+    --font-size-h1: 60px;
+    --font-size-h2: 48px;
+    --font-size-h3: 18px;
+
+    --font-size-nav-link: 60px;
+    --font-size-disclaimer: 12px;
+
+    --line-height-h3: 135%;
+
+    --line-height-nav-link: 94%;
+    --line-height-caption: 140%;
+    --line-height-disclaimer: 150%;
+  }
+}
+
+@media ($screen-extra-medium) {
+  :root {
+    --container-offset: 16px;
+  }
+}

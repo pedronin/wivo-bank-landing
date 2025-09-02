@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  @include body-m;
+
+  font-family: $font-family;
+  font-size: 100%;
+
+  scroll-behavior: smooth;
+}
+
+button,
+ul,
+li,
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  background-color: inherit;
+  border: none;
+
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  height: fit-content;
+}

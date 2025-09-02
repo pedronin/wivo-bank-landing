@@ -1,0 +1,44 @@
+.burger {
+  margin-top: auto;
+  padding-top: 20px;
+
+  .nav {
+    margin-bottom: 56px;
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 24px;
+    }
+
+    &__item {
+      @include nav-link;
+    }
+  }
+
+  &__copyright {
+    @include link-s;
+
+    color: $color-gray;
+  }
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 400;
+
+    pointer-events: none;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+
+    transition: all 0.3s ease;
+
+    &.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+}

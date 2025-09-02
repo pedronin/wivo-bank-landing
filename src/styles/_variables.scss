@@ -1,0 +1,29 @@
+// Container
+$container-max-width: 1440px;
+
+//  Breakpoints
+$screen-huge: "(max-width: 1440px)";
+$screen-large: "(max-width: 1280px)";
+$screen-big: "(max-width: 1120px)";
+$screen-medium: "(max-width: 1024px)";
+$screen-extra-medium: "(max-width: 768px)";
+$screen-small: "(max-width: 576px)";
+$screen-tiny: "(max-width: 480px)";
+$screen-very-tiny: "(max-width: 375px)";
+
+// Colors
+$color-white: #fff;
+$color-black: #000;
+$color-cursed-black: #131314;
+$color-inkwell-inception: #edf5ff1a;
+$color-gray: #85888f;
+$color-light-spirit: #c3c9d2;
+
+// fonts
+$font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  sans-serif;
+
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+
+$letter-spacing-heading: -3.5px;

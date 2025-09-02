@@ -1,0 +1,24 @@
+.nav {
+  &.footer & {
+    &__list {
+      column-gap: 24px;
+    }
+
+    &__item {
+      @include link-m;
+    }
+  }
+
+  &__list {
+    display: flex;
+    column-gap: 32px;
+  }
+
+  &__item {
+    @include nav-link;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

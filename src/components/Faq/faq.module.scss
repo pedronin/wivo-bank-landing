@@ -1,0 +1,68 @@
+.faq {
+  &__container {
+    @include container;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+
+    padding-top: 120px;
+    padding-bottom: 240px;
+
+    @media ($screen-medium) {
+      flex-direction: column;
+
+      padding-top: 80px;
+      padding-bottom: 120px;
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 254px;
+  }
+
+  &__title {
+    @include h2;
+
+    margin-bottom: 48px;
+
+    @media ($screen-extra-medium) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__cta {
+    &_text {
+      @include body-m;
+
+      color: $color-gray;
+    }
+
+    &_link {
+      @include link-m;
+      @include blueGradientText;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+
+    width: 100%;
+    max-width: 930px;
+
+    @media ($screen-extra-medium) {
+      gap: 40px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+}

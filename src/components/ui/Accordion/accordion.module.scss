@@ -1,0 +1,72 @@
+.accordion {
+  overflow: hidden;
+  border-radius: 24px;
+  background-color: $color-cursed-black;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    padding: 40px;
+    padding-right: 32px;
+
+    cursor: pointer;
+    transition: margin-bottom 0.3s ease;
+
+    @media ($screen-extra-medium) {
+      padding-top: 20px;
+      padding-left: 20px;
+      padding-right: 16px;
+      padding-bottom: 24px;
+    }
+  }
+
+  &__title {
+    @include h3;
+
+    text-align: left;
+  }
+
+  &__indicator {
+    transition: transform 0.3s ease;
+
+    @media ($screen-extra-medium) {
+      width: 24px;
+      height: 24px;
+    }
+
+    &.open {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__content {
+    @include body-m;
+
+    padding: 0 40px;
+
+    color: $color-gray;
+    overflow: hidden;
+    transition: height 0.3s ease;
+
+    @media ($screen-extra-medium) {
+      padding-left: 20px;
+      padding-right: 33px;
+    }
+  }
+
+  &__inner {
+    display: block;
+
+    max-width: 604px;
+    padding-top: 5px;
+    padding-bottom: 40px;
+
+    @media ($screen-extra-medium) {
+      padding-top: 4px;
+      padding-bottom: 24px;
+    }
+  }
+}

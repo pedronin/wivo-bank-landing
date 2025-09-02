@@ -1,0 +1,11 @@
+.button {
+  @include buttonStyles;
+
+  &.light {
+    background-color: $color-inkwell-inception;
+  }
+
+  @media ($screen-small) {
+    padding: 13px 24px 14px;
+  }
+}

@@ -1,0 +1,18 @@
+.input {
+  @include link-m;
+
+  width: 100%;
+  padding: 16px 28px 17px;
+
+  border-radius: 80px;
+  border: 1px solid #a4a8b0;
+  background-color: inherit;
+
+  &::placeholder {
+    color: $color-light-spirit;
+  }
+
+  @media ($screen-small) {
+    padding: 12px 24px 13px;
+  }
+}

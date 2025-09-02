@@ -1,0 +1,50 @@
+.ticker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 55px;
+
+  margin-top: 88px;
+  margin-bottom: 120px;
+
+  @media ($screen-medium) {
+    row-gap: 32px;
+
+    margin-top: 56px;
+    margin-bottom: 30px;
+  }
+
+  &__description {
+    @include caption;
+
+    padding: 0 60px;
+
+    color: $color-gray;
+    text-align: center;
+  }
+
+  &__child {
+    display: block;
+    margin: 0 60px;
+
+    &:hover {
+      img {
+        transform: scale(1.05);
+      }
+    }
+
+    img {
+      height: 92px;
+
+      transition: transform 0.1s ease;
+    }
+
+    @media ($screen-extra-medium) {
+      margin: 0 20px;
+
+      img {
+        height: 70px;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.link {
+  @include buttonStyles;
+
+  &.light {
+    background-color: $color-inkwell-inception;
+  }
+
+  &.white {
+    color: $color-black;
+    background-color: $color-white;
+  }
+
+  &.small {
+    @include link-m;
+
+    padding: 6px 14px;
+
+    border-radius: 64px;
+
+    @media ($screen-extra-medium) {
+      @include link-s;
+    }
+
+    @media ($screen-small) {
+      padding: 6px 12px;
+    }
+  }
+
+  @media ($screen-small) {
+    padding: 13px 24px 14px;
+  }
+}

@@ -1,0 +1,172 @@
+.banner {
+  background: linear-gradient(180deg, #85888f 11.5%, #9da3ab 100%);
+  overflow: hidden;
+
+  &__container {
+    @include container;
+
+    position: relative;
+
+    padding-top: 124px;
+    padding-bottom: 40px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 83px;
+      right: -214px;
+
+      width: 1312px;
+      height: 706px;
+
+      transform: rotate(-110deg);
+
+      background-image: url("../../../public/img/glass-promo.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 103px;
+      right: 220px;
+
+      width: 563px;
+      height: 775px;
+
+      background-image: url("../../../public/img/hand-with-phone.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    @media ($screen-huge) {
+      &::before {
+        left: 248px;
+      }
+
+      &::after {
+        left: 564px;
+      }
+    }
+
+    @media ($screen-big) {
+      &::before {
+        top: 63px;
+
+        width: 1049px;
+        height: 564px;
+      }
+
+      &::after {
+        top: 83px;
+        left: 502px;
+
+        width: 450px;
+        height: 620px;
+      }
+    }
+
+    @media ($screen-medium) {
+      padding-bottom: 530px;
+
+      &::before {
+        top: 690px;
+        left: -200px;
+
+        width: 1310px;
+        height: 498px;
+
+        transform: rotate(-140deg);
+        background-size: 1310px 498px;
+      }
+
+      &::after {
+        top: 600px;
+        left: calc(50% - 280px);
+      }
+    }
+
+    @media ($screen-extra-medium) {
+      padding-top: 84px;
+      padding-bottom: 530px;
+
+      &::before {
+        top: 450px;
+        left: -297px;
+
+        transform: rotate(-135deg);
+      }
+
+      &::after {
+        top: 480px;
+        left: calc(50% - 250px);
+
+        width: 397px;
+        height: 546px;
+      }
+    }
+
+    @media ($screen-small) {
+      padding-top: 84px;
+      padding-bottom: 530px;
+
+      &::before {
+        width: 925px;
+        height: 498px;
+
+        top: auto;
+        bottom: 21px;
+
+        transform: rotate(-121deg);
+        background-size: contain;
+      }
+
+      &::after {
+        top: auto;
+        bottom: -56px;
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    max-width: 560px;
+
+    @media ($screen-medium) {
+      max-width: none;
+    }
+
+    &_title {
+      @include h1;
+
+      margin-bottom: 179px;
+
+      @media ($screen-big) {
+        margin-bottom: 32px;
+      }
+    }
+
+    &_text {
+      @include p;
+
+      max-width: 540px;
+
+      @media ($screen-medium) {
+        max-width: none;
+      }
+    }
+
+    &_buttons {
+      display: flex;
+      gap: 14px;
+
+      margin-top: 32px;
+    }
+  }
+}

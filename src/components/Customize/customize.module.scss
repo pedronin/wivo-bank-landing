@@ -1,0 +1,123 @@
+.customize {
+  overflow: hidden;
+
+  &__container {
+    @include container;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+    @media ($screen-medium) {
+      padding-top: 80px;
+      padding-bottom: 40px;
+    }
+
+    background-image: url("../../../public/img/glass-cards.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: bottom 120px center;
+
+    @media ($screen-small) {
+      background-size: 653px auto;
+      background-position: bottom 54px center;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 48px;
+
+    max-width: 710px;
+
+    text-align: center;
+
+    @media ($screen-huge) {
+      margin: 0 auto;
+      max-width: 900px;
+
+      text-align: center;
+    }
+
+    @media ($screen-extra-medium) {
+      row-gap: 32px;
+    }
+  }
+
+  &__title {
+    @include h2;
+  }
+
+  &__description {
+    @include body-m;
+
+    color: $color-gray;
+  }
+
+  .gray {
+    color: $color-gray;
+  }
+
+  &__decor {
+    margin-top: 107px;
+    padding-bottom: 3px;
+
+    @media ($screen-small) {
+      margin-top: 63px;
+    }
+  }
+
+  @keyframes floating {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @media ($screen-medium) {
+    @keyframes floating {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-8px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+  }
+
+  &__image {
+    width: 613px;
+    margin: 0 auto;
+    display: block;
+
+    animation: floating 4s ease-in-out infinite;
+
+    @media ($screen-huge) {
+      width: 500px;
+    }
+
+    @media ($screen-medium) {
+      width: auto;
+      min-width: 277px;
+      max-width: 55%;
+    }
+
+    @media ($screen-very-tiny) {
+      width: 220px;
+      min-width: 0;
+      max-width: none;
+    }
+  }
+}
